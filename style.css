@@ -1,0 +1,414 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: palegoldenrod;
+}
+
+nav {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  background-color: whitesmoke;
+  position: fixed;
+  z-index: 10;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar_icon {
+  font-size: 32px;
+}
+
+header img {
+  margin-left: 10vw;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem 1.5rem;
+  padding-top: 20vh;
+}
+
+main .image {
+  width: 45%;
+  max-width: 600px;
+  min-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .image img {
+  width: 80%;
+  height: auto;
+}
+
+main .text-content {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  gap: 0.75rem;
+}
+
+.text-content .highlight {
+  color: white;
+  background-color: #149f39;
+  padding: 0.75rem;
+}
+
+.text-content h1 {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.text-content p {
+  line-height: 1.25;
+  font-weight: 300;
+}
+
+.text-content button {
+  color: black;
+  background-color: #ffc066;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 5px;
+}
+
+.text-content button:hover {
+  cursor: pointer;
+  opacity: 0.75;
+  transform: scale(1.05);
+  transition: 0.25s ease-in-out;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem;
+}
+
+.details .detail {
+  background-color: white;
+  border: 1px solid gray;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  width: 32%;
+
+  padding: 1rem 0rem;
+  text-align: start;
+}
+
+.details .detail:hover {
+  transform: scale(1.075);
+  transition: 0.3s ease-in-out;
+}
+
+.detail .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80%;
+
+  min-width: 100px;
+}
+.detail .image img {
+  width: 60%;
+}
+
+.divider
+{
+  border: 1px solid gray;
+  margin-top: 3rem;
+
+}
+.divider:hover
+{
+
+transform: scaley(2);
+
+}
+
+.menu {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  gap: 2rem;
+}
+.menu button {
+  background-color: #149f39;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+.menu button:hover {
+  opacity: 0.75;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+}
+.menu h2 {
+  font-size: 2.5rem;
+}
+
+.menu .food-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 0.75rem;
+}
+
+.menu .item {
+  border-radius: 1rem;
+  transform: 0.2s;
+}
+
+.menu .item :hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+}
+
+.menu .item img {
+  width: 100%;
+
+  height: 100%;
+  border-radius: 1rem;
+}
+.menu .image1 {
+  grid-area: 1/1/3/3;
+}
+.menu .image2 {
+  grid-area: 1/3/3/4;
+}
+.menu .image3 {
+  grid-area: 1/4/2/5;
+}
+.menu .image4 {
+  grid-area: 3/1/4/2;
+}
+.menu .image5 {
+  grid-area: 3/2/4/3;
+}
+.menu .image6 {
+  grid-area: 3/3/4/4;
+}
+.menu .image7 {
+  grid-area: 2/4/4/5;
+}
+
+footer {
+  background-color: #fff0cd;
+  padding: 1.5rem 0;
+  text-align: start;
+}
+
+footer .content {
+  /* background-color: red; */
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 0 0.5rem;
+}
+
+footer h3 {
+  color: #808080;
+  margin-bottom: 1rem;
+}
+footer li {
+  color: #000000;
+  letter-spacing: 1px;
+  font-weight: 300;
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+footer input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem;
+  height: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+footer .content > * {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+}
+
+footer .bar_icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+footer .bar_icon i {
+  margin-left: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    padding: 1rem 1.5rem;
+    padding-top: 20vh;
+  }
+
+  main .image {
+    align-self: center;
+   
+    width: 75%;
+    max-width: 500px;
+    min-width: 100px;
+    margin-bottom: 2rem;
+  }
+  main .image img {
+    width: 80%;
+    height: auto;
+  }
+
+  main .text-content {
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .text-content h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .details .detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+
+    padding: 0.5rem;
+    gap: 0.75rem;
+  }
+
+  .detail .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30%;
+
+    min-width: 100px;
+  }
+  .detail .image img {
+    width: 60%;
+  }
+
+  footer .content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  main .text-content {
+    width: 100%;
+    gap: 0.5rem;
+    padding: 0.25rem;
+  }
+
+  .text-content h1 {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .menu {
+    padding: 1rem 1rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .menu .food-items {
+    gap: 0.5rem;
+  }
+
+  .menu .item {
+    border-radius: 0.5rem;
+  }
+  .menu h2 {
+    font-size: 1.75rem;
+  }
+
+  footer {
+    padding: 0.75rem 0;
+  }
+}
+
+@media (max-width: 320px) {
+  nav {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: whitesmoke;
+    position: fixed;
+    z-index: 10;
+  }
+  nav img {
+    width: 75%;
+  }
+  .menu h2 {
+    font-size: 1.25rem;
+  }
+
+  .detail .image {
+    width: 40%;
+  }
+}
