@@ -7,128 +7,153 @@
 
 body {
   min-height: 100vh;
-  background-color: palegoldenrod;
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+  background: linear-gradient(135deg, #d0f4de , #fef9c3); 
+
+
+
+
+
 }
 
 nav {
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
-
-  padding: 0.75rem;
-  margin-bottom: 1.5rem;
-  background-color: whitesmoke;
-  position: fixed;
-  z-index: 10;
+  padding: 0 1rem 0.5rem 1rem;
 }
-.navigation {
+
+nav .container {
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
 
-.bar_icon {
-  font-size: 32px;
+nav img {
+  width: 90%;
 }
 
-header img {
-  margin-left: 10vw;
+nav .bar_icon {
+  font-size: 25px;
 }
 
-.container {
-  max-width: 1200px;
+/* header completed */
+
+main .top {
+   width: 100%;
+  padding: 3rem 1rem clamp(3rem, 15vw, 6rem);
+}
+
+.top .container {
+  max-width: 1400px;
   margin: 0 auto;
-}
 
-main {
-  min-height: 100vh;
-  width: 100%;
   display: flex;
-
   align-items: center;
   justify-content: space-evenly;
-  padding: 1rem 1.5rem;
-  padding-top: 20vh;
+  gap: 2rem;
 }
-
-main .image {
-  width: 45%;
-  max-width: 600px;
-  min-width: 400px;
+.top .container .image {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  width: 40%;
+  max-width: 500px;
 }
-main .image img {
-  width: 80%;
-  height: auto;
+.top .container .image img {
+  width: 100%;
 }
 
-main .text-content {
-  width: 50%;
-
+.top .container .text-content {
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-
-  gap: 0.75rem;
+  gap: 1rem;
 }
-
-.text-content .highlight {
+.top .container .text-content .highlight {
   color: white;
   background-color: #149f39;
-  padding: 0.75rem;
+  padding: 0.5rem;
 }
-
-.text-content h1 {
+.top .container .text-content h1 {
   font-size: 4rem;
+  font-size: clamp(1.75rem, 5vw, 3.5rem);
   font-weight: 400;
 }
-
-.text-content p {
-  line-height: 1.25;
+.top .container .text-content p {
+  line-height: 1.5;
   font-weight: 300;
+  letter-spacing: 0.5px;
+  font-size: 1.25rem;
+  font-size: clamp(1rem, 3vw, 1.25rem);
 }
-
-.text-content button {
+.top .container .text-content button {
   color: black;
   background-color: #ffc066;
   border: none;
   padding: 0.75rem;
-  border-radius: 5px;
-}
-
-.text-content button:hover {
+  border-radius: 8px;
   cursor: pointer;
-  opacity: 0.75;
-  transform: scale(1.05);
+}
+.top .container .text-content button:hover {
+  transform: scale(1.1);
   transition: 0.25s ease-in-out;
 }
+/* top completed */
 
+/* details section
+
+
+*/
 .details {
+  width: 100%;
+  padding: 3rem 1rem clamp(3rem, 15vw, 6rem);
+}
+
+.details .container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  padding: 1rem;
+  gap: 1.5rem;
 }
 
-.details .detail {
+.details .container .detail {
   background-color: white;
   border: 1px solid gray;
   box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
-
   display: flex;
-
+  align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 
   width: 32%;
 
   padding: 1rem 0rem;
-  text-align: start;
+
+  cursor: pointer;
 }
 
-.details .detail:hover {
+.details .container .detail:hover {
   transform: scale(1.075);
   transition: 0.3s ease-in-out;
 }
@@ -137,43 +162,44 @@ main .text-content {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  width: 80%;
-
-  min-width: 100px;
+  width: 30%;
 }
 .detail .image img {
-  width: 60%;
+  width: 100%;
+}
+.details .detail .text-content {
+  width: 70%;
 }
 
-.divider
-{
+/* divider */
+
+.divider {
   border: 1px solid gray;
-  margin-top: 3rem;
 
+  max-width: 1200px;
+  margin: 0rem auto;
 }
-.divider:hover
-{
 
-transform: scaley(2);
-
+.divider:hover {
+  transform: scaley(2);
 }
+
+/* menu section  */
 
 .menu {
   width: 100%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3rem 2rem;
-  gap: 2rem;
+  gap: clamp(1rem, 3vw, 2rem);
+  padding: clamp(3rem, 15vw, 6rem) 1rem;
 }
 .menu button {
   background-color: #149f39;
   color: white;
   border: none;
-  padding: 0.5rem;
+  padding: 0.75rem;
   letter-spacing: 0.5px;
   font-weight: 300;
   font-size: 1rem;
@@ -186,19 +212,20 @@ transform: scaley(2);
   transition: 0.3s ease-in-out;
 }
 .menu h2 {
-  font-size: 2.5rem;
+  font-size: clamp(1rem, 6vw, 2.5rem);
 }
 
 .menu .food-items {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, auto);
-  gap: 0.75rem;
+
+  gap: clamp(2px, 2vw, 12px);
 }
 
 .menu .item {
   border-radius: 1rem;
-  transform: 0.2s;
+  cursor: pointer;
 }
 
 .menu .item :hover {
@@ -208,7 +235,6 @@ transform: scaley(2);
 
 .menu .item img {
   width: 100%;
-
   height: 100%;
   border-radius: 1rem;
 }
@@ -234,24 +260,35 @@ transform: scaley(2);
   grid-area: 2/4/4/5;
 }
 
+/* menu completed */
+
+/* footer  */
+
 footer {
-  background-color: #fff0cd;
-  padding: 1.5rem 0;
-  text-align: start;
+  /* background-color: #fff0cd; */
+  padding: 3rem 1rem;
+  border-top: 2px solid gray
 }
 
 footer .content {
-  /* background-color: red; */
-  margin: 0 auto;
   max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: flex-start;
-  justify-content: space-evenly;
-  padding: 0 0.5rem;
+  justify-content: space-between;
+  gap: 2rem;
+}
+footer .logo {
+  max-width: 300px;
+}
+footer .logo img {
+  width: 100%;
 }
 
 footer h3 {
-  color: #808080;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.75);
   margin-bottom: 1rem;
 }
 footer li {
@@ -260,98 +297,35 @@ footer li {
   font-weight: 300;
   list-style: none;
   margin-bottom: 0.5rem;
+  cursor: pointer;
 }
 
-footer input {
+footer .email input {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.35rem;
-  height: 2rem;
-  margin-bottom: 1.25rem;
-}
-
-footer .content > * {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 footer .bar_icon {
-  font-size: 30px;
+  font-size: 25px;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
   cursor: pointer;
 }
-footer .bar_icon i {
-  margin-left: 0.75rem;
-}
+
+/* media queries */
 
 @media (max-width: 768px) {
-  main {
-    display: flex;
+  .details .container {
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-
-    padding: 1rem 1.5rem;
-    padding-top: 20vh;
   }
 
-  main .image {
-    align-self: center;
-   
-    width: 75%;
-    max-width: 500px;
-    min-width: 100px;
-    margin-bottom: 2rem;
-  }
-  main .image img {
-    width: 80%;
-    height: auto;
-  }
-
-  main .text-content {
-    width: 100%;
-    gap: 1rem;
-    padding: 1rem;
-  }
-
-  .text-content h1 {
-    font-size: 2.5rem;
-    font-weight: 400;
-  }
-
-  .details {
-    display: flex;
-    flex-direction: column;
-
-    padding: 1rem;
-    gap: 2rem;
-  }
-
-  .details .detail {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    width: 100%;
-
-    padding: 0.5rem;
+  .details .container .detail {
+    width: min(350px, 100%);
     gap: 0.75rem;
-  }
-
-  .detail .image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 30%;
-
-    min-width: 100px;
-  }
-  .detail .image img {
-    width: 60%;
   }
 
   footer .content {
@@ -360,55 +334,13 @@ footer .bar_icon i {
 }
 
 @media (max-width: 500px) {
-  main .text-content {
+  .top .container {
+    flex-direction: column;
+  }
+  .top .container .image {
+    width: min(80%, 200px);
+  }
+  .top .container .text-content {
     width: 100%;
-    gap: 0.5rem;
-    padding: 0.25rem;
-  }
-
-  .text-content h1 {
-    font-size: 2rem;
-    font-weight: 400;
-  }
-
-  .menu {
-    padding: 1rem 1rem;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .menu .food-items {
-    gap: 0.5rem;
-  }
-
-  .menu .item {
-    border-radius: 0.5rem;
-  }
-  .menu h2 {
-    font-size: 1.75rem;
-  }
-
-  footer {
-    padding: 0.75rem 0;
-  }
-}
-
-@media (max-width: 320px) {
-  nav {
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    background-color: whitesmoke;
-    position: fixed;
-    z-index: 10;
-  }
-  nav img {
-    width: 75%;
-  }
-  .menu h2 {
-    font-size: 1.25rem;
-  }
-
-  .detail .image {
-    width: 40%;
   }
 }
