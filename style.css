@@ -8,25 +8,7 @@
 body {
   min-height: 100vh;
 
-
-
-
-
-
- 
-
-
-
-
-
-
- 
-  background: linear-gradient(135deg, #d0f4de , #fef9c3); 
-
-
-
-
-
+  background: linear-gradient(135deg, #d0f4de, #fef9c3);
 }
 
 nav {
@@ -55,7 +37,7 @@ nav .bar_icon {
 /* header completed */
 
 main .top {
-   width: 100%;
+  width: 100%;
   padding: 3rem 1rem clamp(3rem, 15vw, 6rem);
 }
 
@@ -267,7 +249,7 @@ main .top {
 footer {
   /* background-color: #fff0cd; */
   padding: 3rem 1rem;
-  border-top: 2px solid gray
+  border-top: 2px solid gray;
 }
 
 footer .content {
